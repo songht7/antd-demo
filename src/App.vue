@@ -1,21 +1,25 @@
 <template>
-	<div id="app">
-		<home></home>
+	<div id="PageInit">
+		<a-button @click="onClick">Go Home Page!!!</a-button>
+		<router-link to="/home">Go to Home</router-link>
 	</div>
 </template>
 
 <script>
-	import Home from "@/views/home.vue"
 	export default {
-		name: 'App',
-		components:{
-			Home
+		name: 'PageInit',
+		components: {},
+		methods: {
+			onClick() {
+				console.log(this.$route.params)
+				this.$router.push('/home')
+			}
 		}
 	}
 </script>
 
 <style>
-	#app {
+	#PageInit {
 		font-family: Avenir, Helvetica, Arial, sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
