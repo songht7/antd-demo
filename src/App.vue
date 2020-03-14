@@ -1,19 +1,14 @@
 <template>
-	<div id="PageInit">
-		<a-button @click="onClick">Go Home Page!!!</a-button>
-		<router-link to="/home">Go to Home</router-link>
+	<div id="App">
+      <router-view/>
 	</div>
 </template>
 
 <script>
 	export default {
-		name: 'PageInit',
+		name: 'App',
 		components: {},
 		methods: {
-			onClick() {
-				console.log(this.$route.params)
-				this.$router.push('/home')
-			}
 		}
 	}
 </script>
